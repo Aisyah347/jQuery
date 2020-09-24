@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>My Form</title>
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1">
+    <style>
+    .alert {
+        padding: 20px;
+        background-color: white;
+        color: black;
+    }
+    .closebtn {
+        margin-left: 15px;
+        color: black;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .closebtn:hover{
+        color: black;
+    }
+    </style>
+    </head>
+	<body>
+		<center>
+            <body style="background-color:plum;">
+            </body>
+			<table border="0" width="35%">
+            <h1>Submit Form</h1>
+                <form action="#" method="POST" onSubmit="validasi()">
+				<tr>
+					<td colspan="2" align="center"><form name="form1" >
+					</td>
+					<form>
+                        Nama: <input type = "text" name = "nama" size="12" maxlength="12" />
+                        <br>
+                        No. Matrik: <input type = "matriknumber" name = "matriknumber" minlength="12" maxlength="12"/>
+        
+                        <tr>
+                            <td colspan="2" align="center">
+                            <!--submit to send the entered data-->
+                            <!--name: category, value: button name-->
+                            <input type="submit" name="Submit" value="Simpan"/>
+                            <!--reset to clear form-->
+                            <input type="Reset" name="Reset" value="Batal"/>
+                            </td>
+                        </tr>
+                    </form>
+			</table>
+		</center>
+    </body>
+    <script type="text/javascript">
+        function validasi() {
+            var nama = document.getElementById("nama").value;
+            var matriknumber = document.getElementById("matriknumber").value;
+            if (nama != "" && matriknumber!="") {
+                return true;
+            }else{
+                alert('Anda harus mengisi data dengan lengkap !');
+            }
+        }
+</script>
+</html>
